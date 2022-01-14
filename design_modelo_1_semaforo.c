@@ -1,11 +1,11 @@
 /*
  ============================================================================
- Name        : Controlador de Sem·foro(Tamanho de Fila,IN e OUT fixo)
- Author      : Ot·vio Augusto Joenck Freire
+ Name        : Controlador de Sem√°foro(Tamanho de Fila,IN e OUT fixo)
+ Author      : Ot√°vio Augusto Joenck Freire
  Version     :
  Copyright   : Your copyright notice
- Description : Controlador de Tr‚nsito com a seguinte polÌtica: O sem·foro estar·
- aberto para rua que apresentar· a maior fila de carros.
+ Description : Controlador de Tr√¢nsito com a seguinte pol√≠tica: O sem√°foro estar√°
+ aberto para rua que apresentar√° a maior fila de carros.
  ============================================================================
  */
 
@@ -17,18 +17,18 @@
 int carro_A = 15;
 /*fila B*/
 int carro_B = 15;
-/*Taxa de SaÌda A*/
+/*Taxa de Sa√≠da A*/
 int tx_out_A = 5;
-/*Taxa de SaÌda B*/
+/*Taxa de Sa√≠da B*/
 int tx_out_B = 5;
 /*Taxa de entrada A*/
 int tx_in_A = 2;
 /*Taxa de entrada B*/
 int tx_in_B = 2;
-/*AÁ„o do controlador*/
+/*A√ß√£o do controlador*/
 char acao[15];
 
-/*controlador de tr‚nsito*/
+/*controlador de tr√¢nsito*/
 char*  controlador(int obs){
 
 	if(obs==3){
@@ -51,7 +51,7 @@ char*  controlador(int obs){
 }
 
 
-/*ambiente de observaÁ„o verifica a maior fila de carros*/
+/*ambiente de observa√ß√£o verifica a maior fila de carros*/
 int ambiente_observacao(){
 	if(carro_A>carro_B){
 		return 1;
@@ -68,28 +68,28 @@ int ambiente_observacao(){
 
 /*representa o comportamento do sistema*/
 int ambiente_simul(char* acao){
-	/*Controlador retornou sua decis„o, Aberto A*/
+	/*Controlador retornou sua decis√£o, Aberto A*/
 	if (strcmp(acao,"aberto A")==0){
-		/*Fila A vazia, apenas h· entrada de carros na fila A*/
+		/*Fila A vazia, apenas h√° entrada de carros na fila A*/
 		if(carro_A<0){
 			carro_A += 2;
 
 		}
-		/* Caso contr·rio, h· entrada e saÌda no sitema*/
+		/* Caso contr√°rio, h√° entrada e sa√≠da no sitema*/
 		else{
 			carro_A -= tx_out_A;
 			carro_A += tx_in_A;
 		}
 
 	}
-	/*Controlador retornou sua decis„o, Aberto B*/
+	/*Controlador retornou sua decis√£o, Aberto B*/
 	else if(strcmp(acao,"aberto B")==0){
-		/*fila vazia B, h· apenas entrada na fila*/
+		/*fila vazia B, h√° apenas entrada na fila*/
 		if(carro_B<0){
 			carro_B += tx_in_B;
 
 		}
-		/*caso contr·rio, h· entrada e saÌda da fila*/
+		/*caso contr√°rio, h√° entrada e sa√≠da da fila*/
 		else{
 			carro_B -= tx_out_B;
 			carro_B += tx_in_B;
@@ -123,20 +123,20 @@ int main(void) {
 	srand(time(NULL));
 
 
-	/*o laÁo acontecer· atÈ a fila A e fila B zerarem*/
+	/*o la√ßo acontecer√° at√© a fila A e fila B zerarem*/
 	while(carro_A>0||carro_B>0){
-		/*ProteÁ„o de fila vazia*/
+		/*Prote√ß√£o de fila vazia*/
 		fila_vazia_A();
 		fila_vazia_B();
-		/*ambiente de observaÁ„o envia sua verificaÁ„o do sistema*/
+		/*ambiente de observa√ß√£o envia sua verifica√ß√£o do sistema*/
 		obs = ambiente_observacao();
-		/*controlador realiza uma aÁ„o baseado na observaÁ„o e acontece alteraÁıes no sistema*/
+		/*controlador realiza uma a√ß√£o baseado na observa√ß√£o e acontece altera√ß√µes no sistema*/
 		ambiente_simul(controlador(obs));
-		/*proteÁ„o de fila vazia*/
+		/*prote√ß√£o de fila vazia*/
 		fila_vazia_A();
 		fila_vazia_B();
 		i++;
-		printf("Tempo = %d, situaÁ„o %s, A = %d,B = %d\n",i,controlador(obs),carro_A,carro_B);
+		printf("Tempo = %d, situa√ß√£o %s, A = %d,B = %d\n",i,controlador(obs),carro_A,carro_B);
 
 
 	}
