@@ -1,11 +1,11 @@
 /*
  ============================================================================
- Name        : Controlador de Semáforo(Política Aleatória,IN e OUT fixo)
- Author      : Otávio Augusto Joenck Freire
+ Name        : Controlador de SemÃ¡foro(PolÃ­tica AleatÃ³ria,IN e OUT fixo)
+ Author      : OtÃ¡vio Augusto Joenck Freire
  Version     :
  Copyright   : Your copyright notice
- Description : Controlador de Trânsito com a seguinte política: A decisão para abertura e fechamento
- é feito de forma aleatória.
+ Description : Controlador de TrÃ¢nsito com a seguinte polÃ­tica: A decisÃ£o para abertura e fechamento
+ Ã© feito de forma aleatÃ³ria.
   ============================================================================
  */
 
@@ -18,7 +18,7 @@
 int carro_A = 15;
 int carro_B = 15;
 char acao[15];
-/*controlador de trânsito: Abertura de forma aleatória*/
+/*controlador de trÃ¢nsito: Abertura de forma aleatÃ³ria*/
 char*  controlador(int obs){
 
 	if(obs==1){
@@ -31,7 +31,7 @@ char*  controlador(int obs){
 }
 
 
-/*é feito um sorteio na observação*/
+/*Ã© feito um sorteio na observaÃ§Ã£o*/
 int ambiente_observacao(){
 	int obs = (rand()%2);
 	printf("obs=%d\n",obs);
@@ -90,19 +90,19 @@ int main(void) {
 	srand(time(NULL));
 
 
-	/*o laço acontecerá até a fila A e fila B zerarem*/
+	/*o laÃ§o acontecerÃ¡ atÃ© a fila A e fila B zerarem*/
 	while(carro_A>0||carro_B>0){
-		/*Proteção de fila vazia*/
+		/*ProteÃ§Ã£o de fila vazia*/
 		fila_vazia_A();
 		fila_vazia_B();
-		/*ambiente de observação envia sua verificação do sistema*/
+		/*ambiente de observaÃ§Ã£o envia sua verificaÃ§Ã£o do sistema*/
 		obs = ambiente_observacao();
-		/*controlador realiza uma ação baseado na observação e acontece alterações no sistema*/
+		/*controlador realiza uma aÃ§Ã£o baseado na observaÃ§Ã£o e acontece alteraÃ§Ãµes no sistema*/
 		ambiente_simul(controlador(obs));
 		fila_vazia_A();
 		fila_vazia_B();
 		i++;
-		printf("Tempo = %d, situação %s, A = %d,B = %d\n",i,controlador(obs),carro_A,carro_B);
+		printf("Tempo = %d, situaÃ§Ã£o %s, A = %d,B = %d\n",i,controlador(obs),carro_A,carro_B);
 
 	}
 
