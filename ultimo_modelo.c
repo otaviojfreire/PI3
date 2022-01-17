@@ -1,7 +1,7 @@
 /*
  ============================================================================
- Name        : Último Modelo Veículos Diferentes.c
- Author      : Otávio Augusto Joenck Freire
+ Name        : Ãšltimo Modelo VeÃ­culos Diferentes.c
+ Author      : OtÃ¡vio Augusto Joenck Freire
  Version     :
  Copyright   : Your copyright notice
  Description : Hello World in C, Ansi-style
@@ -14,7 +14,7 @@
  Author      :
  Version     :
  Copyright   : Your copyright notice
- Description : Simulação de Tráfego com veículos de tipo diferente.
+ Description : SimulaÃ§Ã£o de TrÃ¡fego com veÃ­culos de tipo diferente.
  ============================================================================
  */
 
@@ -465,7 +465,7 @@ int main(void) {
 		fila_infinita_B();
 		fila_vazia_A();
 		fila_vazia_B();
-		printf("Tempo = %d, situação %s,FILA A = %d,FILA B = %d\n",i,controlador(obs),carro_A,carro_B);
+		printf("Tempo = %d, situaÃ§Ã£o %s,FILA A = %d,FILA B = %d\n",i,controlador(obs),carro_A,carro_B);
 		i++;
 	}
 
