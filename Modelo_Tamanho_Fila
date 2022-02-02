@@ -1,10 +1,10 @@
 /*
  ============================================================================
  Name        : Modelo Tamanho de Fila
- Author      : Ot·vio Augusto Joenck Freire
+ Author      : Ot√°vio Augusto Joenck Freire
  Version     :
  Copyright   : Your copyright notice
- Description : Modelo de sem·foro com a polÌtica de abertura e
+ Description : Modelo de sem√°foro com a pol√≠tica de abertura e
  fechamento pelo tamanho de fila
  ============================================================================
  */
@@ -131,7 +131,7 @@ int main(void) {
 		ambiente_simul(controlador(obs));
 		fila_vazia_A();
 		fila_vazia_B();
-		printf("Tempo = %d, situaÁ„o %s, A = %d,B = %d\n",i,controlador(obs),fila_A,fila_B);
+		printf("Tempo = %d, situa√ß√£o %s, A = %d,B = %d\n",i,controlador(obs),fila_A,fila_B);
 
 		i++;
 	}
