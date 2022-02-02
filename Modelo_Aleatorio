@@ -1,11 +1,11 @@
 /*
  ============================================================================
- Name        : Modelo Aleatório
- Author      : Otávio Augussto Joenck Freire
+ Name        : Modelo AleatÃ³rio
+ Author      : OtÃ¡vio Augussto Joenck Freire
  Version     :
  Copyright   : Your copyright notice
- Description : Modelo de semáforo com política de abertura
- e fechamento de maneira aleatória
+ Description : Modelo de semÃ¡foro com polÃ­tica de abertura
+ e fechamento de maneira aleatÃ³ria
  ============================================================================
  */
 
@@ -118,7 +118,7 @@ int main(void) {
 		ambiente_simul(controlador(obs));
 		fila_vazia_A();
 		fila_vazia_B();
-		printf("Tempo = %d, situação %s, A = %d,B = %d\n",i,controlador(obs),fila_A,fila_B);
+		printf("Tempo = %d, situaÃ§Ã£o %s, A = %d,B = %d\n",i,controlador(obs),fila_A,fila_B);
 
 		i++;
 	}
