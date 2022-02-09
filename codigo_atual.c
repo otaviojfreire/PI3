@@ -1,7 +1,7 @@
 /*
  ============================================================================
  Name        : Modelo Tamanho de Fila
- Author      : Otávio Augusto Joenck Freire
+ Author      : OtÃ¡vio Augusto Joenck Freire
  Version     :
  Copyright   : Your copyright notice
  Description :
@@ -122,7 +122,7 @@ void ambiente_simul(){
 		//fila vazia sair do loop
 		if(fila_B==0)
 			B_aberto=0;
-		//proteção para não passar de 10 na fila
+		//proteÃ§Ã£o para nÃ£o passar de 10 na fila
 		if(fila_B>10)
 			fila_B = 10;
 		tx_B = (rand()%saida);
