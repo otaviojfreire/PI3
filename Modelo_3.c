@@ -5,7 +5,7 @@
  Version     :
  Copyright   : Your copyright notice
  Description : Modelo de semáforo com a política de abertura e
- fechamento pelo tamanho de fila
+ fechamento com tempo fixo de semáforo aberto
  ============================================================================
  */
 
