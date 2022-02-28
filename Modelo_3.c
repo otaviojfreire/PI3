@@ -5,7 +5,7 @@
  Version     :
  Copyright   : Your copyright notice
  Description : Modelo de semáforo com a política de abertura e
- fechamento com tempo fixo de semáforo aberto
+ fechamento pelo tamanho de fila
  ============================================================================
  */
 
@@ -23,9 +23,9 @@
 //define o número de vezes que será simulado(tentativas)
 #define Y 100
 //define período de semaforo A aberto
-#define K 100
+#define K 25
 //define pe´riodo de semáfor B aberto
-#define Z 1
+#define Z 15
 
 
 //representa a fila de veículos da rua A
@@ -210,7 +210,7 @@ int main(void) {
 					j = 0;
 				}
 
-					printf("Tempo = %d, situação Aberto B, A = %d,B = %d\n",m,fila_A,fila_B);
+					//printf("Tempo = %d, situação Aberto B, A = %d,B = %d\n",m,fila_A,fila_B);
 			}
 
 
