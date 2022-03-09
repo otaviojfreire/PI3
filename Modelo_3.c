@@ -4,8 +4,8 @@
  Author      : Otávio Augusto Joenck Freire
  Version     :
  Copyright   : Your copyright notice
- Description : Modelo de semáforo com a política de abertura e
- fechamento pelo tamanho de fila
+ Description : Modelo de semáforo com período fixo de 
+ aberto e fechado
  ============================================================================
  */
 
