@@ -258,17 +258,7 @@ int main(void) {
 	int  obs = 0,h=0;
 	//semente para gerar números aleatórios
 	srand(time(NULL));
-	//gerar veícuos iniciais para a fila
-	gerador_veiculo();
-	fila_A += taxa_entrada;
-	soma = soma + fila_A;
-	gerador_veiculo();
-	fila_B += taxa_entrada;
-	soma_b = soma_b + fila_B;
-
-
-
-
+	
 	while(h!=Y){
 		soma = 0;
 		soma_b = 0;
